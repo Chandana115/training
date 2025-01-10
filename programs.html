@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //program1
+    let a = parseInt(prompt("Enter a number : "))
+    if(a%2==0 && a%3==0){
+        document.write(`${a} is divisible by 2 & 3`)
+    }else if(a%3==0){
+        document.write(`${a} is divisible by 3`)
+    }else if(a%2==0 ){
+        document.write(`${a} is divisible by 2`)
+    }else{
+        document.write(`${a} is not divisible by 2 & 3`)
+    }
+    //program2
+    let a1 = parseInt(prompt("Enter first number : "))
+    let b = parseInt(prompt("Enter second number : "))
+    let c = parseInt(prompt("Enter third number : "))
+    if(a1>b && a>c){
+        document.write(`${a1} is the largest number among ${a1},${b},${c}`)
+    }else if(b>a1 && b>c){
+        document.write(`${b} is the largest number among  ${a1},${b},${c}`)
+    }else{
+        document.write(`${c} is the largest number among  ${a1},${b},${c}`)
+    }
+    //program3
+    let days = parseInt(prompt("Enter total number of working days : "))
+    let ab = parseInt(prompt("Enter total number of days absent"))
+    let present = days - ab
+    if((present/days)*100 >75){
+        document.write("Student is eligible to write the exam ")
+    }else {
+        document.write("Student is not eligible to write the exam")
+    }
+   </script> 
+</body>
+</html>
