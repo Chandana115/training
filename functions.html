@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //1
+    function greet(){
+        console.log("Hello");
+    }
+    greet()
+    console.log("Hi")
+    greet()
+
+    //2
+    function g(name){
+        console.log("Hello "+name);
+    }
+    let name = prompt("Enter your name : ")
+    g(name)
+
+    //3
+    function sum(a,b){
+        console.log("Sum of two numbers is : "+(a+b))
+    }
+    sum(3,4)
+
+    //4
+    function a(x,y){
+     return x+y;
+     }
+    let n1 = parseFloat(prompt("Enter num1:"));
+    let n2 = parseFloat(prompt("Enter num2:"));
+    //calling a function
+    let result = a(n1,n2)
+    console.log("The sum is: "+result)
+
+    //5
+    sum = function(n1,n2){
+    let r = n1+n2
+    return r
+    }
+    console.log(sum(8,9))
+
+
+   </script> 
+</body>
+</html>
