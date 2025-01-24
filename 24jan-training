@@ -1,0 +1,81 @@
+Arrow Functions:
+	Es6 version
+	More readable and more structure
+	Anonymous functions(lambda function)
+	Without function name but they are assigned to a variable
+Examples:
+Arrow functions without parameter
+let c = ()=>{
+console.log(“Hi”)
+}
+c()
+Arrow functions with parameter
+let x = (x,y)=>{
+console.log(x+y)
+}
+x(20,30)
+x(40,50)
+Arrow function with one argument, without using parenthesis
+let greet=x=>console.log(x);
+greet(“Hello”)
+Arrow function without argument
+let greet=()=>console.log(“Hello”)
+greet() 
+Arrow functions as an expression
+let 18;
+let welcome = (age<18)?
+()=>console.log(“Hi Nick”):
+()=>console.log(:Hi Noah);
+welcome()
+Synchronous function:
+	Step by step
+	One task 
+Example: Synchronous function
+function task1(){
+console.log(“Task1: Start”)
+}
+function task2(){
+console.log(“Task2: Start”)
+}
+function task3(){
+console.log(“Task3 :Start”)
+}
+task1()
+task2()
+task3()
+Asynchronous function:
+	Mutliple tasks at a time
+Example:
+console.log("Hi Raquel");
+ setTimeout(()=>{
+ console.log("Hello Ares")
+ },5000);
+ console.log("How are you?")
+Javascript callback functions:
+A function that is passed as argument to another function
+function greet(name,callback){
+console.log(`Hello,${name}!`)
+callback();
+}
+//this calls the callback function after greeting
+function sayGoodbye(){
+console.log(“Goodbye”)
+}
+//call the greet and pass sayGoodbye as the callback
+greet(“jay”,sayGoodbye)
+Promise:
+---Eventual completion
+Three states
+1.Pending: still not completed –continuing
+2. fulfilled: task completed
+3. Rejected: the operation is failed
+Example:
+let myPromise = new Promise((resolve, reject)=>
+{let success=true;
+if(success){
+resolve(“task completed”);
+};else{
+reject(“Task failed”)
+}
+};
+)
