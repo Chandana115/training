@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrowFunctions</title>
+</head>
+<body>
+    <script>
+        //without parameter
+        // let c = ()=>{
+        //     console.log("Hello");
+        // }
+        // c()
+        //with parameter
+        // let x = (x,y)=>{
+        // console.log(x+y)
+        // }
+        // x(20,30)
+        // x(40,50)
+        //with one argument
+        // let greet=x=>console.log(x);
+        // greet("Hello")
+        //without argument
+        // let greet=()=>console.log("Hello")
+        // greet()
+        //as an expression
+        // let age = 18;
+        // let welcome = (age<18)?
+        // ()=>console.log("Hi Nick"):
+        // ()=>console.log("Hi Noah");
+        // welcome()
+        //synchronous function
+        // function task1(){
+        // console.log("Task1:Start")
+        // }
+        // function task2(){
+        // console.log("Task2:Start")
+        // }
+        // function task3(){
+        // console.log("Task3:Start")
+        // }
+        // task1()
+        // task2()
+        // task3()
+        //asynchornous function
+        // console.log("Hi Raquel");
+        // setTimeout(()=>{
+        //     console.log("Hello Ares")
+        // },5000);
+        // console.log("How are you?")
+        //callback function
+        // function greet(name,callback){
+        // console.log(`Hello,${name}!`)
+        // callback();
+        // }
+        // //this calls the callback function after greeting
+        // function sayGoodbye(){
+        // console.log("Goodbye")
+        // }
+        // //call the greet and pass sayGoodbye as the callback
+        // greet("jay",sayGoodbye)
+        //promise
+        let myPromise = new Promise((resolve, reject)=>
+        {let success=true;
+        if(success){
+        resolve("task completed");
+        };else{
+        reject("Task failed")
+        }
+    };
+        )
+
+    
+
+
+
+ 
+
+
+
+    </script>
+</body>
+</html>
