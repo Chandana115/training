@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mainfunction(callback){
+            console.log("Executing main function");
+            callback()
+            //here we call the callback function
+        }
+        function callbackFuntcion(){
+            console.log("Callback function executed")
+        }
+        mainfunction(callbackFuntcion);
+
+        //Example2-passing a named function as  a callback
+        function greet(name,callback){
+        console.log("hello"+name);
+        callback();
+        //executes call back function after greeting
+        }
+        function goodbye(){
+        console.log("goodbye")
+        }
+        greet("Pavani",goodbye);
+
+        // //Example3-using an anonymous function as a callback
+        function greet(name,callback){
+        console.log("hello"+name);
+        callback();
+        //executes call back function after greeting
+        }
+        greet("Keifer",function(){
+            console.log("goodbye")
+        })
+        //Example4-asynchronous callback with setTimeout
+        function fetchData(callback){
+            console.log("Fetching data...")
+                setTimeout(function(){
+                    console.log("Data fetched");
+                    callback();
+                },2000);
+        }
+        function processData(){
+            console.log("Processing the fetched data...");
+        }
+        fetchData(processData)
+        //Example5-using callback with array methods(map)
+        const numbers=[1,2,3,4,5]
+        const d = numbers.map(function(num){
+            return num*2
+        })
+        console.log(d)
+        //user registration scenario based
+        function registerUser(username,email,callback){
+            console.log("registering user: "+username);
+            setTimeout(function(){
+                console.log("user "+username+" registered successfully");
+                callback(email);//calls the callback after registration
+            },3000);
+        }
+        function sendWelcomeEmail(email){
+            console.log("Sending welcome email to "+email);
+        }
+        registerUser("Keifer","keiferwatson11@gmail.com",sendWelcomeEmail);
+        
+
+
+
+    </script>
+</body>
+</html>
