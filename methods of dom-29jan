@@ -1,0 +1,109 @@
+Getting element by id:
+Returns the elemenst tag given the id value
+Example:
+<body>
+    <h1 id="a"> I am Nick</h1>
+    <h1 id="b"> I am Keifer</h1>
+    <h1 id="c"> I am Hardin</h1>
+    <script>
+        let x = document.getElementById("a")
+        console.log(x)
+    </script>
+</body>
+
+Getting element by ClassName():
+Returns all the elements having the same class name
+Returns an html collection object
+An html collection is an array like list of html elements
+The length property provides the size of collection
+Example:
+<body>
+    <h1 id="a" class="a"> I am Nick</h1>
+    <h1 id="b" class="b"> I am Keifer</h1>
+    <h1 id="c" class="c"> I am Hardin</h1>
+    <h1 class="d"> I am Ares</h1>
+    <script>
+        let x = document.getElementByClassName("d")
+        console.log(x)
+    </script>
+</body>
+Getting elements by TagName():
+This method takes a tag name as stirng and returns an html collection object
+Each element loops
+Example:
+<h1 id="a" class="a"> I am Nick</h1>
+    <h1 id="b" class="b"> I am Keifer</h1>
+    <h1 id="c" class="c"> I am Hardin</h1>
+    <h1 class="d"> I am Ares</h1>
+    <script>
+        let x = document.getElementsByTagName("h1")
+        console.log(x)
+    </script>
+With loops: Example
+<h1 id="a" class="a"> I am Nick</h1>
+    <h1 id="b" class="b"> I am Keifer</h1>
+    <h1 id="c" class="c"> I am Hardin</h1>
+    <h1 class="d"> I am Ares</h1>
+    <script>
+        let x = document.getElementsByTagName("h1")
+        console.log(x)
+        for(let i=0;i<x.length;i++){
+            console.log(x[i])
+        }
+    </script>
+Getting elements by QuerySelector():
+The document query selector method select an html element by tagname, by id , by classname.
+Query Selector: 
+Can be used to select HTML element by its tagname , by id , classname; it only selects the first element
+Example:
+<h1 id="aa" class="a"> I am Nick</h1>
+    <h1 id="b" class="b"> I am Keifer</h1>
+    <h1 id="c" class="c"> I am Hardin</h1>
+    <h2 class="d"> I am Ares</h1>
+    <script>
+        let x2 = document.querySelector('a')
+        console.log(x2)
+        for(let i=0;i<x2.length;i++){
+            console.log(x2[i])
+        }
+    </script>
+
+QueryselectorAll:
+It selects all the html elements by its class name and tag name.
+Example:
+<h1 id="aa" class="a"> I am Nick</h1>
+    <h1 id="b" class="b"> I am Keifer</h1>
+    <h1 id="c" class="c"> I am Hardin</h1>
+    <h2 class="d"> I am Ares</h1>
+    <script>
+        let x2 = document.querySelectorAll('a')
+        console.log(x2)
+        for(let i=0;i<x2.length;i++){
+            console.log(x2[i])
+        }
+    </script>
+Manipulating Elements:
+To create HTML elements:
+createElement()  create a new element
+--method document.createElement()
+textContent:
+Example: Single element
+<script>
+        let t = document.createElement('h2')
+        t.className = "tt"
+        t.textContent = "Hello"
+        console.log(t)
+        document.body.appendChild(t);
+    </script>
+Example: Multiple elements
+<script>
+        const t1 = ['jay','jake','vernon']
+        for(let y=0;y<t1.length;y++){
+            let t2 = document.createElement("h1")
+            t2.className="e"
+            t2.textContent==t1[y];
+            console.log(t1[y])
+            console.log(t1);
+            console.log(t2);
+        }
+    </script>
