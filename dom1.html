@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a" class="a"> I am Nick</h1>
+    <h1 id="b" class="b"> I am Keifer</h1>
+    <h1 id="c" class="c"> I am Hardin</h1>
+    <h1 class="d"> I am Ares</h1>
+    <script>
+        let x = document.getElementsByClassName("d")
+        console.log(x)
+    </script>
+    <h1 id="a" class="a"> I am Nick</h1>
+    <h1 id="b" class="b"> I am Keifer</h1>
+    <h1 id="c" class="c"> I am Hardin</h1>
+    <h1 class="d"> I am Ares</h1>
+    <script>
+        let x1 = document.getElementsByTagName('h1')
+        console.log(x1)
+        for(let i=0;i<x1.length;i++){
+            console.log(x1[i])
+        }
+    </script>
+    <h1 id="aa" class="a"> I am Nick</h1>
+    <h1 id="b" class="b"> I am Keifer</h1>
+    <h1 id="c" class="c"> I am Hardin</h1>
+    <h2 class="d"> I am Ares</h1>
+    <script>
+        let x2 = document.querySelectorAll('a')
+        console.log(x2)
+        for(let i=0;i<x2.length;i++){
+            console.log(x2[i])
+        }
+    </script>
+    <script>
+        let t = document.createElement('h2')
+        t.className = "tt"
+        t.textContent = "Hello"
+        console.log(t)
+        document.body.appendChild(t);
+    </script>
+    <script>
+        const t1 = ['jay','jake','vernon']
+        for(let y=0;y<t1.length;y++){
+            let t2 = document.createElement("h1")
+            t2.className="e"
+            t2.textContent==t1[y];
+            console.log(t1[y])
+            console.log(t1);
+            console.log(t2);
+        }
+    </script>
+</body>
+</html>
