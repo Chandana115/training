@@ -1,0 +1,49 @@
+Example 2: Multiple elements
+<script>
+        let title
+        for(let i=0;i<3;i++){
+            title = document.createElement('h2')
+            title.className="tt"
+            title.textContent=i
+            console.log(title)
+        }
+    </script>
+Removing a child element from a parent node:
+Example:
+<h1>Removing child node</h1>
+    <h2> I am Chandana</h2>
+    <ul>
+        <li>Jasper Jean</li>
+        <li>Keifer Watson</li>
+        <li>Raquel Mendoza </li>
+    </ul>
+    <script>
+        const ul = document.querySelector('ul')
+        const lists = document.querySelectorAll('li')
+        for(const list of lists){
+            console.log(`Removing: ${list.textContent}`)
+            ul.removeChild(list)
+        }
+    </script>
+To append a new element
+Example:
+<div id="a">
+        <h1>Juliana</h1>
+        <h1>Stella</h1>
+    </div>
+    <div id="b">
+        <h1>Tessa</h1>
+        <h1>Lara</h1>
+    </div>
+    <script>
+        let n = document.createElement("h2")
+        n.textContent = "Juliana is the Team lead"
+        //get the parent element
+        let p = document.getElementById("b")
+        console.log(p.innerText)
+        //append the new element in to the parent node
+        p.appendChild(n)
+        //log the inner text of the parent
+        console.log(p)
+        console.log(p.innerText)
+    </script>
