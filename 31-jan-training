@@ -1,0 +1,72 @@
+Insert Before:
+It inserts a new node before an existing node or child node of a specific parent node
+Example1:
+ <div id="a">
+        <h1> Raquel</h1>
+        <div id="r">Naoh</div>
+    </div>
+    <div id="b">
+        <h1>Hash</h1>
+        <h1>Jay</h1>
+    </div>
+    <script>
+        let n = document.createElement("h2")
+        n.textContent = "Jennie"
+        let p = document.getElementById("a")
+        let l = document.getElementById("r")
+        p.insertBefore(n,l)
+        console.log(p)
+    </script>
+Example2:
+ <div id="a">
+        <h1 id="c"> Raquel</h1>
+        <div id="r">Naoh</div>
+    </div>
+    <div id="b">
+        <h1>Hash</h1>
+        <h1>Jay</h1>
+    </div>
+    <script>
+        let n = document.createElement("h2")
+        n.textContent = "Jennie"
+        let p = document.getElementById("a")
+        let l = document.getElementById("r")
+        p.insertBefore(n,l)
+        console.log(p)
+        let n1 = document.createElement("h2")
+        n1.textContent = "Chandana"
+        let p1 = document.getElementById("a")
+        let l1 = document.getElementById("c")
+        p1.insertBefore(n1,l1)
+        console.log(p1)
+    </script>
+
+To remove an element
+Example
+<div id="a">
+        <h1 id="c"> Raquel</h1>
+        <div id="r">Naoh</div>
+    </div>
+    <div id="b">
+        <h1>Hash</h1>
+        <h1>Jay</h1>
+    </div>
+    <script>
+let p2 = document.getElementById("a")
+        p2.remove()
+    </script>
+Example2:
+<div id="a">
+        <h1 id="c"> Raquel</h1>
+        <div id="r">Naoh</div>
+    </div>
+    <div id="b">
+        <h1>Hash</h1>
+        <h1>Jay</h1>
+    </div>
+    <script>
+let n3 = document.getElementById("a")
+        let l3 = document.getElementById("r")
+        console.log(l3)
+        n3.removeChild(l3)
+    </script>
