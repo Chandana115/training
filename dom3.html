@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a">
+        <h1 id="c"> Raquel</h1>
+        <div id="r">Naoh</div>
+    </div>
+    <div id="b">
+        <h1>Hash</h1>
+        <h1>Jay</h1>
+    </div>
+    <script>
+        let n = document.createElement("h2")
+        n.textContent = "Jennie"
+        let p = document.getElementById("a")
+        let l = document.getElementById("r")
+        p.insertBefore(n,l)
+        console.log(p)
+        let n1 = document.createElement("h2")
+        n1.textContent = "Chandana"
+        let p1 = document.getElementById("a")
+        let l1 = document.getElementById("c")
+        p1.insertBefore(n1,l1)
+        console.log(p1)
+    </script>
+    <div id="a">
+        <h1 id="c"> Raquel</h1>
+        <div id="r">Naoh</div>
+    </div>
+    <div id="b">
+        <h1>Hash</h1>
+        <h1>Jay</h1>
+    </div>
+    <script>
+        let n2 = document.createElement("h2")
+        n2.innerText = "Jennie"
+        let p2 = document.getElementById("a")
+        let l2 = document.getElementById("r")
+        p2.insertBefore(n2,l2)
+        console.log(p2)
+        let n3 = document.createElement("h2")
+        n3.innerText = "Chandana"
+        let p3 = document.getElementById("a")
+        let l3 = document.getElementById("c")
+        p3.insertBefore(n3,l3)
+        console.log(p3)
+        let p5 = document.getElementById("a")
+        p5.remove()
+        
+    </script>
+    <div id="a">
+        <h1 id="c"> Raquel</h1>
+        <div id="r">Naoh</div>
+    </div>
+    <div id="b">
+        <h1>Hash</h1>
+        <h1>Jay</h1>
+    </div>
+    <script>
+        let n4 = document.getElementById("a")
+        let l4 = document.getElementById("r")
+        console.log(l4)
+        n4.removeChild(l4)
+    </script>
+</body>
+</html>
