@@ -1,0 +1,49 @@
+React JS
+JSX:
+Javascript XML is a syntax extension for JS
+It allows us to write HTML code in React
+The JSX code gets compiled into JS
+Babel: A tool that converts HTML code in JS
+All the HTML tags must be closed
+Create a element by JSX:
+Example1:
+<div id="app"></div>
+    <script type = "text/babel">
+        const element = <h1 className="a">Hello,JSX!</h1>
+        const e = document.getElementById('app')
+        const root = ReactDOM.createRoot(e)
+        root.render(element)
+    </script>
+Example2:
+<div id="app"></div>
+    <script>
+        const e = React.createElement(
+            'h1' , {id:'a'},"I am Chandana"
+        )
+        const element = document.getElementById('app')
+        const root = ReactDOM.createRoot(element)
+        root.render(e)
+    </script>
+Expressions:
+<div id="app"></div>
+    <script type = "text/babel">
+        const n=10;
+        const m = <h1>React is {n*2} better than React JS</h1>
+        const root = ReactDOM.createRoot(document.getElementById('app'))
+        root.render(m)
+        </script>
+Conditional Rendering in JSX
+<div id="app"></div>
+        <script type = "text/babel">
+            const App=()=>{
+                const isLoggedIn = false;
+                return(
+            <div>
+                {isLoggedIn ? (<h1>Welcome back User!</h1>):(<h1>Please login</h1>)}  
+                {isLoggedIn && <h2>You have a new notification!</h2>}    
+            </div>
+           );
+            };
+            const root = ReactDOM.createRoot(document.getElementById())
+            root.render(<App/>)
+          
