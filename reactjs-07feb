@@ -1,0 +1,65 @@
+Components:
+Conditional Rendering:
+Greet.js:
+import React from "react";
+function Greet({isLoggedIn}){
+    if(isLoggedIn){
+        return <h1>Welcome Back</h1>
+    }else{
+        return <h1>Please Login</h1>
+    }
+}
+export default Greet;
+App.js:
+import React from 'react';
+import Greet from './components/Greet';
+function App(){
+  const isLoggedIn = true;
+  return(
+    <div className='App'>
+      <Greet isLoggedIn={isLoggedIn} />
+    </div>
+    
+  )
+}
+export default App;   
+Lists and Keys:
+In React , a list is a collection of items you want to show on screen.
+Keys: Keys in react helps us to keep the track of items in a list
+--React know which items you have changed; updated
+
+Map() : elements in array
+Function will be applied to all elements
+const n = [1,2,3,4,5]
+const d = m.map(num=>num*2)
+console.log(d)
+# 2, 4, 6, 8, 10
+Example:
+FruitList.js
+import React from "react";
+const FruitList=()=>{
+    const fruits = ['kiwi','berry','banana','guava'];
+    return(
+      <div>
+        <h1>Fruits List</h1>
+        <ul>
+          {fruits.map((fruits,index)=>(
+            <li key = {index}>{fruits}</li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+  export default FruitList;
+App.js
+import React from 'react';
+import FruitList from './components/FruitList';
+function App(){
+return(
+  <div>
+    <FruitList/>
+  </div>
+)
+}
+
+export default App;   
