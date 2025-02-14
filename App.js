@@ -1,40 +1,43 @@
-import React,{createContext,useContext} from "react";
-//import Props from "./components/props";
-//create context to hold the data
-const DataContext=createContext()
-function App() {
-  const data = "Hello I am Chandana";
-  return (<div>
-    <DataContext.Provider value={data}>
-      <User1/>
-    </DataContext.Provider>
-  
-   </div> 
-  );
+// import React , {use, useReducer}from 'react';
+// import './App.css';
+// //reducer function to track the number of apples
+// function appleReducer(state=3 , action){
+//   switch(action.type){
+//     case 'ADD_APPLE':
+//       return state + 1;
+//     case 'EAT_APPLE':
+//       return state - 1;
+//     default:
+//       return state;
+//   }
+// }
+// function App(){
+//   const[state , dispatch] = useReducer(appleReducer,3);
+//   return(
+//     <div style={{padding:'20px',textAlign:'center'}}>
+//       <h1 style={{color:'red'}}>Apple Counter</h1>
+//       <p>Number of Apples : {state}</p>
+//       <div >
+//       <button onClick={()=>dispatch({type:'ADD_APPLE'})} style={{backgroundColor:'cadetblue'}}> ADD APPLE </button><br/>
+//       <button onClick={()=>dispatch({type:'EAT_APPLE'})} style={{backgroundColor:'cadetblue'}}> EAT APPLE </button>
+//       </div>
+//     </div>
+//   )
+// }
+// export default App;
+import React , {useState}from 'react';
+import Child from './components/Child';
+const Parent=()=>{
+  const[message , setMessage]=useState('Hello World');
+  const changeMessage=()=>{
+    setMessage("You clicked the button")
+  };
+  return(
+    <div>
+      <h1>{message}</h1>
+      {/*passing the change message function as a prop to the child */}
+      <Child changeMessage={changeMessage}/>
+    </div>
+  )
 }
-
-// User1 component
-function User1({ data }) {
-  return <User2 data={data} />;
-}
-
-// User2 component
-function User2({ data }) {
-  return <User3 data={data} />;
-}
-
-// User3 component
-function User3({ data }) {
-  return <User4 data={data} />;
-}
-
-// User4 component
-function User4({ data }) {
-  
-    const data1=useContext(DataContext);
-    return(
-      <div>{data1}</div>
-  );
-}
-
-export default App;
+export default Parent;
