@@ -1,0 +1,21 @@
+d)Key events : 
+(onKeyDown): key is pressed on the keyboard
+Syntax: onKeyDown = {keyDownFunction}
+keyDownFunction : this is a function that runs whenever any key is pressed on the key board
+return type : returns a keyboard event object that provides information about the key that was pressed 
+Example:
+import React, {useState} from 'react';
+function App(){
+    const[key , setkey] = useState("");
+    const handleKeyDown=(event)=>{
+        setkey(event.key);
+    };
+    return(
+        <div className="app" style={{textAlign:'center',padding:'50px'}}>
+            <h1>Welcome to Sai IT Solutions</h1>
+            {key&&<h2>Pressed Key:{key}</h2>}
+            <input type='text' onKeyDown={handleKeyDown} placeholder='press here'/>
+        </div>
+    )
+}
+export default App;
